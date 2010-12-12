@@ -1,159 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<?xml-stylesheet type="text/xsl" href="./modx.prosilver.en.xsl"?>
-<!--
-	NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.
--->
-<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
-<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.3.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
 	<header>
-		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
-		<title lang="en-gb">Topic solved</title>
-		<description lang="en-gb">Allows users to set topics as solved, and then set them back as unsolved. The option is found grouped with the profile icon buttons in the message areas of a topic (i.e. Edit, Report, Quote icons etc). Gives the ability to search in solved and unsolved topics including your own. Configurable in ACP > Forums .. Edit forum.</description>
-		<author-notes lang="en">The settings for allowing users to set their own topics as solved or unsolved, is found by editing a forum's options in the Administrators Control Panel. Moderators can set user topics as solved or unsolved even when locked.
-Update instructions from previous versions in contrib-directory.</author-notes>
+		<meta name="generator" content="MODX file generated with PP MODX Creator 1.0.1 by tumba25 (phpBB version) at phpbbmodders.net"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Topic solved]]></title>
+		<description lang="en"><![CDATA[Allows users to set topics as solved, and then set them back as unsolved. The option is found grouped with the profile icon buttons in the message areas of a topic (i.e. Edit, Report, Quote icons etc). Gives the ability to search in solved and unsolved topics including your own. Configurable in ACP > Forums .. Edit forum.]]></description>
+		<author-notes lang="en"><![CDATA[The settings for allowing users to set their own topics as solved or unsolved, is found by editing a forum's options in the Administrators Control Panel. Moderators can set user topics as solved or unsolved even when locked.
+Update instructions from previous versions in contrib-directory.]]></author-notes>
 		<author-group>
 			<author>
-				<realname>Jari Kanerva</realname>
-				<email>tumba25@gmail.com</email>
-				<username>tumba25</username>
-				<homepage>http://skripter.se</homepage>
+				<realname><![CDATA[Jari Kanerva]]></realname>
+				<username><![CDATA[tumba25]]></username>
+				<homepage><![CDATA[http://skripter.se]]></homepage>
+				<email><![CDATA[tumba25@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.4.4</mod-version>
+		<mod-version>1.4.5</mod-version>
 		<installation>
 			<level>intermediate</level>
 			<time>2700</time>
-			<target-version>3.0.6</target-version>
+			<target-version>3.0.8</target-version>
 		</installation>
-		<link-group>
-			<link type="template" lang="en-gb" href="./contrib/subsilver2.xml">Instructions for subsilver2 style</link>
-		</link-group>
 		<history>
 			<entry>
-				<date>2009-11-18</date>
-				<rev-version>1.4.3</rev-version>
-				<changelog lang="en-gb">
-					<change>Updated for phpBB 3.0.6</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2009-02-10</date>
-				<rev-version>1.4.3</rev-version>
-				<changelog lang="en-gb">
-					<change>Added support for solved topics in MCP and UCP.</change>
-					<change>Global announcements do not belong to any forum and can't be solved</change>
-					<change>Shows solved posts in previews</change>
-					<change>Changed '0' to 0 in one of the SQL-edits.</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2009-01-12</date>
-				<rev-version>1.4.1 upgrade</rev-version>
-				<changelog lang="en-gb">
-					<change>Instructions to upgrade 1.2.1 to 1.4.1</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2009-01-07</date>
-				<rev-version>1.4.0</rev-version>
-				<changelog lang="en-gb">
-					<change>Some minor changes to the instructions.</change>
-					<change>Submitted for validation.</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-12-20</date>
-				<rev-version>1.3.3</rev-version>
-				<changelog lang="en-gb">
-					<change>Renamed the database-field forum_user_solve to forum_lock_solved.</change>
-					<change>Moved things around in ACP</change>
-					<change>You can now configure that only moderators can reopen solved topics.</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-12-19</date>
-				<rev-version>1.3.2</rev-version>
-				<changelog lang="en-gb">
-					<change>Added trim() to the color request_var() in acp_forums.php</change>
-					<change>Made sure the Topic solved-settings would only be seen when editing a forum.</change>
-					<change>The Topic solved image will show next to the solved-text field if no text is used.</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-12-18</date>
-				<rev-version>1.3.1</rev-version>
-				<changelog lang="en-gb">
-					<change>Fixed bug where the [SOLVED]-text did not work in search.php</change>
-					<change>Added option to select cofigurable [SOLVED]-textcolor</change>
-					<change>Added option to set forums solvable by moderator, user or both</change>
-					<change>Moved the Topic solved code in adm/style/ to a own file</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-12-17</date>
-				<rev-version>1.3.0</rev-version>
-				<changelog lang="en-gb">
-					<change>Added option to select cofigurable [SOLVED]-text or image</change>
-					<change>Moved the Topic solved settings in ACP</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-12-15</date>
-				<rev-version>1.2.1</rev-version>
-				<changelog lang="en-gb">
-					<change>Fixes to work with phpBB 3.0.4</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-09-27</date>
-				<rev-version>1.2.0c</rev-version>
-				<changelog lang="en-gb">
-					<change>Added additional install instructions</change>
-					<change>Instructions rewritten for ModX 1.2.1 by oddfish, thanks.</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2008-08-14</date>
-				<rev-version>1.2.0</rev-version>
-				<changelog lang="en-gb">
-					<change>Submitted for validation</change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2007-07-15</date>
-				<rev-version>0.8.2</rev-version>
-				<changelog lang="en-gb">
-					<change>Fixed the search-functions... When searching for solved topics it will set "Display results as" to topics</change>
+				<date>2007-07-12</date>
+				<rev-version>0.8.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Posted in the MODs in Development forum at phpbb.com]]></change>
 				</changelog>
 			</entry>
 			<entry>
 				<date>2007-07-14</date>
 				<rev-version>0.8.1</rev-version>
-				<changelog lang="en-gb">
-					<change>Solved topics can be locked, setting in ACP.</change>
-					<change>Checks that topics can be set as unsolved before setting topics as unsolved.</change>
-					<change>Only moderators can solve and unsolve locked topics.</change>
+				<changelog lang="en">
+					<change><![CDATA[Solved topics can be locked, setting in ACP.]]></change>
+					<change><![CDATA[Checks that topics can be set as unsolved before setting topics as unsolved.]]></change>
+					<change><![CDATA[Only moderators can solve and unsolve locked topics.]]></change>
 				</changelog>
 			</entry>
 			<entry>
-				<date>2007-07-12</date>
-				<rev-version>0.8.0</rev-version>
-				<changelog lang="en-gb">
-					<change>Posted in the MODs in Development forum at phpbb.com</change>
+				<date>2007-07-15</date>
+				<rev-version>0.8.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Fixed the search-functions... When searching for solved topics it will set "Display results as" to topics]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-09-27</date>
+				<rev-version>1.2.0c</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added additional install instructions]]></change>
+					<change><![CDATA[Instructions rewritten for ModX 1.2.1 by oddfish, thanks.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-08-14</date>
+				<rev-version>1.2.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Submitted for validation]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-12-15</date>
+				<rev-version>1.2.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Fixes to work with phpBB 3.0.4]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-12-17</date>
+				<rev-version>1.3.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added option to select cofigurable [SOLVED]-text or image]]></change>
+					<change><![CDATA[Moved the Topic solved settings in ACP]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-12-18</date>
+				<rev-version>1.3.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Fixed bug where the [SOLVED]-text did not work in search.php]]></change>
+					<change><![CDATA[Added option to select cofigurable [SOLVED]-textcolor]]></change>
+					<change><![CDATA[Added option to set forums solvable by moderator, user or both]]></change>
+					<change><![CDATA[Moved the Topic solved code in adm/style/ to a own file]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-12-19</date>
+				<rev-version>1.3.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added trim() to the color request_var() in acp_forums.php]]></change>
+					<change><![CDATA[Made sure the Topic solved-settings would only bee seen when editing a forum.]]></change>
+					<change><![CDATA[The Topic solved image will show next to the solved-text field if no text is used.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2008-12-20</date>
+				<rev-version>1.3.3</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Renamed the database-field forum_user_solve to forum_lock_solved.]]></change>
+					<change><![CDATA[Moved things around in ACP]]></change>
+					<change><![CDATA[You can now configure that only moderators can reopen solved topics.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-01-07</date>
+				<rev-version>1.4.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Some minor changes to the instructions.]]></change>
+					<change><![CDATA[Submitted for validation.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-01-12</date>
+				<rev-version>1.4.1 upgrade</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Instructions to upgrade 1.2.1 to 1.4.1]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-02-10</date>
+				<rev-version>1.4.3</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added support for solved topics in MCP and UCP.]]></change>
+					<change><![CDATA[Global announcements do not belong to any forum and can't be solved]]></change>
+					<change><![CDATA[Shows solved posts in previews]]></change>
+					<change><![CDATA[Changed '0' to 0 in one of the SQL-edits.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2009-11-18</date>
+				<rev-version>1.4.4</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated for phpBB 3.0.6]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-11-23</date>
+				<rev-version>1.4.5</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated for phpBB 3.0.8]]></change>
 				</changelog>
 			</entry>
 		</history>
+		<link-group>
+			<link type="template" href="./contrib/subsilver2.xml" lang="en">Instructions for subsilver2 style</link>
+		</link-group>
 	</header>
 	<action-group>
-		<sql>ALTER TABLE phpbb_forums ADD forum_allow_solve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;</sql>
-		<sql>ALTER TABLE phpbb_forums ADD forum_allow_unsolve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;</sql>
-		<sql>ALTER TABLE phpbb_forums ADD forum_lock_solved tinyint(1) UNSIGNED NOT NULL DEFAULT 0;</sql>
-		<sql>ALTER TABLE phpbb_forums ADD forum_solve_text varchar(25) NULL;</sql>
-		<sql>ALTER TABLE phpbb_forums ADD forum_solve_color varchar(7) NOT NULL DEFAULT '';</sql>
-		<sql>ALTER TABLE phpbb_topics ADD topic_solved mediumint(8) UNSIGNED NOT NULL DEFAULT 0;</sql>
+		<sql><![CDATA[ALTER TABLE phpbb_forums ADD forum_allow_solve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;]]></sql>
+		<sql><![CDATA[ALTER TABLE phpbb_forums ADD forum_allow_unsolve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;]]></sql>
+		<sql><![CDATA[ALTER TABLE phpbb_forums ADD forum_lock_solved tinyint(1) UNSIGNED NOT NULL DEFAULT 0;]]></sql>
+		<sql><![CDATA[ALTER TABLE phpbb_forums ADD forum_solve_text varchar(25) NULL;]]></sql>
+		<sql><![CDATA[ALTER TABLE phpbb_forums ADD forum_solve_color varchar(7) NOT NULL DEFAULT '';]]></sql>
+		<sql><![CDATA[ALTER TABLE phpbb_topics ADD topic_solved mediumint(8) UNSIGNED NOT NULL DEFAULT 0;]]></sql>
 		<copy>
-			<file from="root/adm/style/acp_topic_solved.html" to="adm/style/acp_topic_solved.html" />
-			<file from="root/styles/prosilver/imageset/*.*" to="styles/prosilver/imageset/*.*" />
+			<file from="root/adm/style/acp_topic_solved.html" to="adm/style/acp_topic_solved.html"/>
+			<file from="root/styles/prosilver/imageset/*.*" to="styles/prosilver/imageset/*.*"/>
 		</copy>
 		<open src="search.php">
 			<edit>
@@ -299,8 +305,7 @@ $show_results	= ($search_solv) ? 'topics' : $show_results;
 		<open src="viewtopic.php">
 			<edit>
 				<find><![CDATA[$voted_id	= request_var('vote_id', array('' => 0));]]></find>
-				<action type="after-add"><![CDATA[
-// BEGIN Topic solved
+				<action type="after-add"><![CDATA[// BEGIN Topic solved
 $solved_id	= request_var('ys', 0);
 $unsolved	= request_var('ns', 0);
 // END Topic solved]]></action>
@@ -754,11 +759,21 @@ define('TOPIC_SOLVED_MOD', 2); // Only moderators
 	'IMG_ICON_TOPIC_SOLVED_UNSET'	=> 'Mark topic as not solved',]]></action>
 			</edit>
 		</open>
+		<open src="styles/prosilver/imageset/imageset.cfg">
+			<edit>
+				<find><![CDATA[img_icon_user_warn = icon_user_warn.gif*20*20]]></find>
+				<action type="after-add"><![CDATA[img_icon_topic_solved_set = icon_topic_solved_set.png*20*20
+img_icon_topic_solved_unset = icon_topic_solved_unset.png*20*20
+img_icon_topic_solved_head = icon_topic_solved_head.png*20*20
+img_icon_topic_solved_list = icon_topic_solved_list.png*12*12
+img_icon_topic_solved_post = icon_topic_solved_post.png*16*16]]></action>
+			</edit>
+		</open>
 		<open src="styles/prosilver/template/index_body.html">
 			<edit>
-				<comment lang="en-gb">The following instructions are for the prosilver style. If you want to apply these instructions to the subsilver2 style, you will find the subsilver2.xml in the contrib folder.
-				</comment>
-				<find><![CDATA[<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a><!-- IF S_USER_LOGGED_IN --> &bull; <a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a> &bull; <a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><!-- ENDIF --> &bull; <a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>]]></find>
+				<comment lang="en"><![CDATA[The following instructions are for the prosilver style. If you want to apply these instructions to the subsilver2 style, you will find the subsilver2.xml in the contrib folder.
+				]]></comment>
+				<find><![CDATA[<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a><!-- IF S_LOAD_UNREADS --> &bull; <a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a><!-- ENDIF --><!-- IF S_USER_LOGGED_IN --> &bull; <a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><!-- ENDIF --> &bull; <a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>]]></find>
 				<inline-edit>
 					<inline-find><![CDATA[<li>]]></inline-find>
 					<inline-action type="after-add"><![CDATA[<!-- IF S_USER_LOGGED_IN --><a href="{U_SEARCH_UNSOLVED_TOPICS}">{L_SEARCH_UNSOLVED}</a> &bull; <a href="{U_SEARCH_YOUR_UNSOLVED_TOPICS}">{L_SEARCH_YOUR_UNSOLVED}</a><br /><!-- ENDIF -->]]></inline-action>
@@ -844,16 +859,6 @@ define('TOPIC_SOLVED_MOD', 2); // Only moderators
 				<action type="after-add"><![CDATA[					<!-- IF postrow.U_SET_SOLVED --><!-- IF postrow.S_TOPIC_SOLVED --><li class="unsolve-icon"><!-- ELSE --><li class="solve-icon"><!-- ENDIF --><a href="{postrow.U_SET_SOLVED}" <!-- IF postrow.S_TOPIC_SOLVED -->title="{L_SET_TOPIC_NOT_SOLVED}"><span>{L_SET_TOPIC_NOT_SOLVED}<!-- ELSE -->title="{L_SET_TOPIC_SOLVED}"><span>{L_SET_TOPIC_SOLVED}<!-- ENDIF --></span></a></li><!-- ENDIF -->]]></action>
 			</edit>
 		</open>
-		<open src="styles/prosilver/imageset/imageset.cfg">
-			<edit>
-				<find><![CDATA[img_icon_user_warn = icon_user_warn.gif*20*20]]></find>
-				<action type="after-add"><![CDATA[img_icon_topic_solved_set = icon_topic_solved_set.png*20*20
-img_icon_topic_solved_unset = icon_topic_solved_unset.png*20*20
-img_icon_topic_solved_head = icon_topic_solved_head.png*20*20
-img_icon_topic_solved_list = icon_topic_solved_list.png*12*12
-img_icon_topic_solved_post = icon_topic_solved_post.png*16*16]]></action>
-			</edit>
-		</open>
 		<open src="styles/prosilver/theme/buttons.css">
 			<edit>
 				<find><![CDATA[.info-icon, .info-icon a			{ background: none top left no-repeat; }]]></find>
@@ -862,7 +867,7 @@ img_icon_topic_solved_post = icon_topic_solved_post.png*16*16]]></action>
 			</edit>
 			<edit>
 				<find><![CDATA[ul.profile-icons li.warn-icon	{ width: {IMG_ICON_USER_WARN_WIDTH}px; height: {IMG_ICON_USER_WARN_HEIGHT}px; }]]></find>
-					<action type="after-add"><![CDATA[ul.profile-icons li.solve-icon	{ width: {IMG_ICON_TOPIC_SOLVED_SET_WIDTH}px; height: {IMG_ICON_TOPIC_SOLVED_SET_HEIGHT}px; }
+				<action type="after-add"><![CDATA[ul.profile-icons li.solve-icon	{ width: {IMG_ICON_TOPIC_SOLVED_SET_WIDTH}px; height: {IMG_ICON_TOPIC_SOLVED_SET_HEIGHT}px; }
 ul.profile-icons li.unsolve-icon	{ width: {IMG_ICON_TOPIC_SOLVED_UNSET_WIDTH}px; height: {IMG_ICON_TOPIC_SOLVED_UNSET_HEIGHT}px; }]]></action>
 			</edit>
 		</open>
@@ -873,11 +878,11 @@ ul.profile-icons li.unsolve-icon	{ width: {IMG_ICON_TOPIC_SOLVED_UNSET_WIDTH}px;
 .unsolve-icon, .unsolve-icon a		{ background-image: url("{IMG_ICON_TOPIC_SOLVED_UNSET_SRC}"); }]]></action>
 			</edit>
 		</open>
-		<diy-instructions lang="en-gb">Make the same changes in language/*/common.php, language/*/acp/forums.php, language/*/acp/styles.php for every language you have installed.
+		<diy-instructions lang="en"><![CDATA[Make the same changes in language/*/common.php, language/*/acp/forums.php, language/*/acp/styles.php for every language you have installed.
 Go to ACP > Styles .. Themes .. prosilver and select Refresh.
 Go to ACP > Styles .. Imagesets .. prosilver and select Refresh.
 And then go to ACP > General and "Purge the cache".
 If you don't see the changes in your forum, purge your browser-cache and then click the refresh-button.
-Remember to edit the forum or forums' options you wish to apply the solved topics to.</diy-instructions>
+Remember to edit the forum or forums' options you wish to apply the solved topics to.]]></diy-instructions>
 	</action-group>
 </mod>
