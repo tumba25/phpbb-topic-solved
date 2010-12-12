@@ -19,7 +19,7 @@
 				<homepage>http://skripter.se</homepage>
 			</author>
 		</author-group>
-		<mod-version>1.3.3</mod-version>
+		<mod-version>1.4.0</mod-version>
 		<installation>
 			<level>intermediate</level>
 			<time>2700</time>
@@ -29,6 +29,14 @@
 			<link type="template" lang="en-gb" href="./contrib/subsilver2.xml">Instructions for subsilver2 style</link>
 		</link-group>
 		<history>
+			<entry>
+				<date>2009-01-07</date>
+				<rev-version>1.4.0</rev-version>
+				<changelog lang="en-gb">
+					<change>Some minor changes to the instructions.</change>
+					<change>Submitted for validation.</change>
+				</changelog>
+			</entry>
 			<entry>
 				<date>2008-12-20</date>
 				<rev-version>1.3.3</rev-version>
@@ -282,7 +290,7 @@ if($solved_id || $unsolved)
 	$ok_solve = $ok_unsolve = FALSE;
 	if($solved_id && $topic_data['forum_allow_solve'])
 	{
-		// Check if the user has permission solve this topic
+		// Check if the user has permission to solve this topic
 		$ok_solve = (($topic_data['forum_allow_solve'] == TOPIC_SOLVED_MOD || $topic_data['forum_allow_solve'] == TOPIC_SOLVED_YES) && $topic_mod != '') ? TRUE : FALSE;
 		$ok_solve = (($topic_data['forum_allow_solve'] == TOPIC_SOLVED_YES) && $topic_data['topic_poster'] == $user->data['user_id'] && $topic_data['topic_status'] == ITEM_UNLOCKED) ? TRUE : $ok_solve;
 
@@ -300,7 +308,7 @@ if($solved_id || $unsolved)
 	}
 	else if($unsolved && $topic_data['forum_allow_unsolve'])
 	{
-		// Check if the user has permission unsolve this topic.
+		// Check if the user has permission to unsolve this topic.
 		$ok_unsolve = (($topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_MOD || $topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_YES) && $topic_mod != '') ? TRUE : FALSE;
 		$ok_unsolve = (($topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_YES) && $topic_data['topic_poster'] == $user->data['user_id'] && $topic_data['topic_status'] == ITEM_UNLOCKED) ? TRUE : $ok_unsolve;
 
@@ -337,11 +345,11 @@ if($solved_id || $unsolved)
 	}]]></find>
 				<action type="after-add"><![CDATA[// BEGIN Topic solved
 	$ok_solve = $ok_unsolve = FALSE;
-	// Check if the user has permission solve this topic and that this topic can be solved.
+	// Check if the user has permission tp solve this topic and that this topic can be solved.
 	$ok_solve = (($topic_data['forum_allow_solve'] == TOPIC_SOLVED_MOD || $topic_data['forum_allow_solve'] == TOPIC_SOLVED_YES) && $topic_mod != '') ? TRUE : FALSE;
 	$ok_solve = (($topic_data['forum_allow_solve'] == TOPIC_SOLVED_YES) && $topic_data['topic_poster'] == $user->data['user_id'] && $topic_data['topic_status'] == ITEM_UNLOCKED) ? TRUE : $ok_solve;
 
-	// Check if the user has permission unsolve this topic and that this topic can be unsolved.
+	// Check if the user has permission to unsolve this topic and that this topic can be unsolved.
 	$ok_unsolve = (($topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_MOD || $topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_YES) && $topic_mod != '') ? TRUE : FALSE;
 	$ok_unsolve = (($topic_data['forum_allow_unsolve'] == TOPIC_SOLVED_YES) && $topic_data['topic_poster'] == $user->data['user_id'] && $topic_data['topic_status'] == ITEM_UNLOCKED) ? TRUE : $ok_unsolve;
 
@@ -685,7 +693,6 @@ Go to ACP > Styles .. Themes .. prosilver and select Refresh.
 Go to ACP > Styles .. Imagesets .. prosilver and select Refresh.
 And then go to ACP > General and "Purge the cache".
 If you don't see the changes in your forum, purge your browser-cache and then click the refresh-button.
-Remember to edit the forum or forums' options you wish to apply the solved topics to.
-		</diy-instructions>
+Remember to edit the forum or forums' options you wish to apply the solved topics to.</diy-instructions>
 	</action-group>
 </mod>
