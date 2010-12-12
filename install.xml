@@ -19,7 +19,7 @@
 				<homepage>http://skripter.se</homepage>
 			</author>
 		</author-group>
-		<mod-version>1.4.0</mod-version>
+		<mod-version>1.4.1</mod-version>
 		<installation>
 			<level>intermediate</level>
 			<time>2700</time>
@@ -29,6 +29,13 @@
 			<link type="template" lang="en-gb" href="./contrib/subsilver2.xml">Instructions for subsilver2 style</link>
 		</link-group>
 		<history>
+			<entry>
+				<date>2009-01-12</date>
+				<rev-version>1.4.1 upgrade</rev-version>
+				<changelog lang="en-gb">
+					<change>Instructions to upgrade 1.2.1 to 1.4.1</change>
+				</changelog>
+			</entry>
 			<entry>
 				<date>2009-01-07</date>
 				<rev-version>1.4.0</rev-version>
@@ -121,12 +128,11 @@
 		</history>
 	</header>
 	<action-group>
-		<sql>ALTER TABLE phpbb_forums
-	ADD forum_allow_solve tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-	ADD forum_allow_unsolve tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-	ADD forum_lock_solved tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-	ADD forum_solve_text varchar(25) CHARACTER SET utf8 COLLATE utf8_bin NULL,
-	ADD forum_solve_color varchar(7) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL;</sql>
+		<sql>ALTER TABLE phpbb_forums ADD forum_allow_solve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE phpbb_forums ADD forum_allow_unsolve tinyint(1) UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE phpbb_forums ADD forum_lock_solved tinyint(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE phpbb_forums ADD forum_solve_text varchar(25) NULL;
+ALTER TABLE phpbb_forums ADD forum_solve_color varchar(7) NOT NULL DEFAULT '';</sql>
 		<sql>ALTER TABLE phpbb_topics ADD topic_solved mediumint(8) UNSIGNED NOT NULL DEFAULT 0;</sql>
 		<copy>
 			<file from="root/adm/style/acp_topic_solved.html" to="adm/style/acp_topic_solved.html" />
