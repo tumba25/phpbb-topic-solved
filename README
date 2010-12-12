@@ -1,0 +1,3 @@
+Allows users to set topics as solved, and then set them back as unsolved.
+The option is found grouped with the profile icon buttons in the message areas of a topic (i.e. Edit, Report, Quote icons etc). Gives the ability to search in solved and unsolved topics including your own.
+Configurable in ACP > Forums .. Edit forum.
